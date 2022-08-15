@@ -166,9 +166,10 @@ def where2Live():
     body = request.get_json()
     print(body)
 
-    params_df=body['contexts']['params']
+    params_df=body['contexts']
     print(params_df)
-    
+    print(type(params_df))
+
     job=params_df['job']['value']
     print(job)
     print(type(job))
