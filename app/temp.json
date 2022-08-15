@@ -1,0 +1,67 @@
+{
+    "bot":{
+       "id":"62f950ff70055f434dcd1f6a!",
+       "name":"finalproject139"
+    },
+    "intent":{
+       "id":"62f9d68a78a1fc2ba5b272c2",
+       "name":"장학금 추가 출력",
+       "extra":{
+          "reason":{
+             "code":1,
+             "message":"OK"
+          }
+       }
+    },
+    "action":{
+       "id":"62f9d901fb4d7520b2bbca2a",
+       "name":"장학금추가출력",
+       "params":{
+          
+       },
+       "detailParams":{
+          
+       },
+       "clientExtra":{
+          
+       }
+    },
+    "userRequest":{
+       "block":{
+          "id":"62f9d68a78a1fc2ba5b272c2",
+          "name":"장학금 추가 출력"
+       },
+       "user":{
+          "id":"38c95f2b7a3faf05b4e2df20e9d59c0e7f21b38f544fe0029f4b38ab347bc44e08",
+          "type":"botUserKey",
+          "properties":{
+             "botUserKey":"38c95f2b7a3faf05b4e2df20e9d59c0e7f21b38f544fe0029f4b38ab347bc44e08",
+             "bot_user_key":"38c95f2b7a3faf05b4e2df20e9d59c0e7f21b38f544fe0029f4b38ab347bc44e08"
+          }
+       },
+       "utterance":"추가 장학금",
+       "params":{
+          "surface":"BuilderBotTest",
+          "ignoreMe":"true"
+       },
+       "lang":"kr",
+       "timezone":"Asia/Seoul"
+    },
+    "contexts":[
+       {
+          "name":"order",
+          "lifespan":5,
+          "ttl":600,
+          "params":{
+             "job":{
+                "value":"대학생",
+                "resolvedValue":"대학생"
+             },
+             "advantage":{
+                "value":"학비지원",
+                "resolvedValue":"학비지원"
+             }
+          }
+       }
+    ]
+ }

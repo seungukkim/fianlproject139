@@ -166,15 +166,15 @@ def where2Live():
     body = request.get_json()
     print(body)
 
-    params_df=body['action']['params']
+    params_df=body['contexts']['params']
     print(params_df)
     
-    job=params_df['job1']
+    job=params_df['job']['value']
     print(job)
     print(type(job))
 
 
-    advantage=params_df['advantage1']
+    advantage=params_df['advantage']['value']
     print(advantage)
     print(type(advantage))
   
