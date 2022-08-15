@@ -169,10 +169,10 @@ def where2Live():
     params_df=body['contexts']
     print(params_df)
     print(type(params_df))
-
-    print(params_df[0])
-    print(params_df[1])
-
+    params_df1=params_df[0]
+    print(params_df1['params'])
+    print(params_df1['params']['advantage']['value'])
+    print(params_df1['params']['job']['value'])
     job=params_df['job']['value']
     print(job)
     print(type(job))
