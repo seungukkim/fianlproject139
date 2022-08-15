@@ -33,7 +33,7 @@ def sayHello():
 
     return responseBody
 
-# 카카오톡 지역 이름 받아오기
+# 장학금 이름 출력
 @app.route('/api/janghakgum', methods=['POST'])
 def whereLive():
     body = request.get_json()
@@ -158,3 +158,131 @@ def whereLive():
     }
 
     return responseBody
+
+
+
+@app.route('/api/janghak2', methods=['POST'])
+def where2Live():
+    body = request.get_json()
+    print(body)
+
+    params_df=body['action']['params']
+    print(params_df)
+    
+    job=params_df['job1']
+    print(job)
+    print(type(job))
+
+
+    advantage=params_df['advantage1']
+    print(advantage)
+    print(type(advantage))
+  
+    advantage1="\'" + advantage +"\'"
+    job1="\'%%" + job + "%%\'"
+    list1=start.db_select(advantage1,job1)
+    responseBody = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                "carousel": {
+                "type": "basicCard",
+                "items": [
+                    {
+                    "title": list1[5][2:-3],
+                    "description": "장학금 추천",
+                    "thumbnail": {
+                        "imageUrl": "https://github.com/seungukkim/herokucombinechat79/blob/main/image/a.png?raw=true"
+                    },
+                    "buttons": [
+                   
+                        {
+                        "action": "share",
+                         "label": "공유하기"
+                        
+                        }
+                        
+                    ]
+                    
+
+                    },
+
+                    {
+                    "title": list1[6][2:-3],
+                    "description": "장학금 추천",
+                    "thumbnail": {
+                        "imageUrl": "https://github.com/seungukkim/herokucombinechat79/blob/main/image/b.png?raw=true"
+                    },
+                    "buttons": [
+                    
+
+                        {
+                        "action": "share",
+                        "label": "공유하기"                      
+                        }
+                        
+                    ]
+                    },
+                    {
+                    "title": list1[7][2:-3],
+                    "description": "장학금 추천",
+                    "thumbnail": {
+                        "imageUrl": "https://github.com/seungukkim/herokucombinechat79/blob/main/image/c.png?raw=true"
+                    },
+                    "buttons": [
+                      
+                        {
+                        "action": "share",
+                        "label": "공유하기"
+                        }
+                       
+                    ]
+                    },
+                    {
+                    "title": list1[8][2:-3],
+                    "description": "장학금 추천",
+                    "thumbnail": {
+                        "imageUrl": "https://github.com/seungukkim/herokucombinechat79/blob/main/image/b.png?raw=true"
+                    },
+                    "buttons": [
+                     
+                        {
+                        "action": "share",
+                        "label": "공유하기"                      
+                        }
+                        
+                    ]
+                    },
+                    {
+                    "title": list1[9][2:-3],
+                    "description": "장학금 추천",
+                    "thumbnail": {
+                        "imageUrl": "https://github.com/seungukkim/herokucombinechat79/blob/main/image/b.png?raw=true"
+                    },
+                    "buttons": [
+                       
+                        {
+                        "action": "share",
+                        "label": "공유하기"                      
+                        }
+                        
+                    ]
+                    }
+                ]
+                }
+             }
+            ],
+            "quickReplies": [
+            {
+                "messageText": "추가 장학금1",
+                "action": "message",
+                "label": "장학금 더보기"
+            }
+            
+            ]
+        }
+    }
+
+    return responseBody
+    
