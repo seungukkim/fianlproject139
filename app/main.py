@@ -34,7 +34,7 @@ def sayHello():
     return responseBody
 
 # 카카오톡 지역 이름 받아오기
-@app.route('/api/whereLive', methods=['POST'])
+@app.route('/api/janghakgum', methods=['POST'])
 def whereLive():
     body = request.get_json()
     print(body)
@@ -46,17 +46,9 @@ def whereLive():
     print(job)
     print(type(job))
 
-    location=params_df['location']
-    print(location)
-
-    position=params_df['position']
-    [print(position)]
-
     advantage=params_df['advantage']
     print(advantage)
     print(type(advantage))
-    age=json.loads(params_df['sys_number'])['amount']
-    print(age)
     advantage1="\'" + advantage +"\'"
     job1="\'%%" + job + "%%\'"
     list1=start.db_select(advantage1,job1)

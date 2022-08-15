@@ -29,7 +29,7 @@ def db_select(choice,choice1):
     list=[]
     # choice="\'생활비지원'"
     # choice1="\'%%대학생%%'"
-    result= engine.execute("SELECT name,url FROM dreamspon WHERE advantage LIKE {0} AND who like {1} ".format(choice,choice1))   
+    result= engine.execute("SELECT name FROM dreamspon WHERE advantage LIKE {0} AND who like {1} ".format(choice,choice1))   
     for r in result: 
         list.append(str(r))
         
