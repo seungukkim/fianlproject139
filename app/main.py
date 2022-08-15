@@ -170,6 +170,9 @@ def where2Live():
     print(params_df)
     print(type(params_df))
 
+    print(params_df[0])
+    print(params_df[1])
+
     job=params_df['job']['value']
     print(job)
     print(type(job))
