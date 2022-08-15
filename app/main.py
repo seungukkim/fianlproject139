@@ -173,12 +173,12 @@ def where2Live():
     print(params_df1['params'])
     print(params_df1['params']['advantage']['value'])
     print(params_df1['params']['job']['value'])
-    job=params_df['job']['value']
-    print(job)
-    print(type(job))
+    
+    
 
-
-    advantage=params_df['advantage']['value']
+    advantage = params_df1['params']['advantage']['value']
+    job = params_df1['params']['job']['value']
+    
     print(advantage)
     print(type(advantage))
   
